@@ -1,6 +1,7 @@
 on:
   pull_request:
     branches: ['release']
+    types: ['closed']
 
 env:
   REGISTRY: ghcr.io
@@ -8,6 +9,7 @@ env:
 
 jobs:
   build-and-push-image:
+    if: github.event.pull_request.merged == true
     # ubuntu-latest: 4-core VM
     runs-on: ubuntu-latest
 
