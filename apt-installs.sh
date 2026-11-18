@@ -19,6 +19,7 @@ DEBIAN_FRONTEND=noninteractive apt-get install -yq \
     # git - Revision control system
     # libtool - General library support script
     # swig - Generate scripting interfaces to C/C++ code
+    # doxygen - Documentation system [RECOMMENDS: doxygen-latex]
 
 ## PYTHON PACKAGE installs ##   
     # python3
@@ -31,6 +32,8 @@ DEBIAN_FRONTEND=noninteractive apt-get install -yq \
     # libfftw3-dev - Fast Fourier Transform library
     # libgsl-dev - GNU scientific library
     # libhdf5f-dev - Heirarchical Data Format 5 (HDF5) development files
+    # nlohmann-json3-dev - JSON for C++ 
+    # libarmadillo-dev - ARMA Linear ALgebra Library 
 DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -yq \
     autoconf \
     automake \
@@ -44,7 +47,10 @@ DEBIAN_FRONTEND=noninteractive apt-get install --no-install-recommends -yq \
     libeigen3-dev \
     libfftw3-dev \
     libgsl-dev \
-    libhdf5-dev
+    libhdf5-dev \
+    nlohmann-json3-dev \
+    libarmadillo-dev \
+    doxygen
 # Clear /var/lib/apt/lists/ to reduce cache.
-# Note that this will require apt-get update before running apt-get install.
+# Note that this will require apt-get update before running apt-get install again.
 rm -rf /var/lib/apt/lists/*
