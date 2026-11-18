@@ -1,4 +1,4 @@
-FROM ubuntu:26.04 AS bayes-build
+FROM ubuntu:26.04
 
 # Path to Python environment to be created
 ARG PYENV=/usr/gwatpyenv
